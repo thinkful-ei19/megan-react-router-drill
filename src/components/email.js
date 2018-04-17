@@ -10,8 +10,8 @@ export default function Email() {
         <div className="email">
             <Route path='/' component={Sidebar} />
             <main>
-                <Route path='/:folderId' exact component={EmailList} folderId="inbox" />
-                {/* <SingleEmail folderId="inbox" emailId="1" /> */}
+                <Route path='/:folderId' exact component={EmailList} />
+                <Route path='/:folderId/:emailId' exact component={SingleEmail} />
             </main>
         </div>
     );
