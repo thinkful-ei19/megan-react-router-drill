@@ -10,7 +10,7 @@ export function EmailList(props) {
                 {email.from}
             </div>
             <div className="email-list-email-title">
-                <Link to={`/{props.folderId}/${email.id}`}> 
+                <Link to={`/${props.folderId}/${email.id}`}> 
                     {email.title} 
                 </Link>
             </div>
@@ -28,6 +28,7 @@ export function EmailList(props) {
 }
 
 const mapStateToProps = (state, props) => {
+    console.log(props.match);
     const folderId= props.match.params.folderId;
     const folder = state[folderId];
     return {
